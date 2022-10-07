@@ -2,13 +2,13 @@ package com.example.cinelunaapp.Components
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-
+import app.src.main.java.com.example.cinelunaapp.R
 
 @Composable
 fun Header(){
     Text(
         text = LocalContext.current.getString(
-            "placeholder -> Debe ser el titulo de la pantalla activa"
+            R.string.pelicula_lista_titulo
         )
     )
 }
