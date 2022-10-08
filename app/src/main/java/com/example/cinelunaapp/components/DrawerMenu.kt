@@ -1,4 +1,4 @@
-package com.example.cinelunaapp.Components
+package com.example.cinelunaapp.components
 
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Column
@@ -39,6 +39,18 @@ fun DrawerMenu(
                 onChangeTitle("")
             }
         )
-
+        Divider(
+            modifier = Modifier.fillMaxWidth()
+        )
+        Text(
+            text = "Sobre Nostros",
+            modifier = Modifier.height(23.dp).clickable
+            {
+                //Agregar el lugar de navegacion
+                navController.navigate("")
+                onCloseDrawer()
+                onChangeTitle("")
+            }
+        )
     }
 }

@@ -1,4 +1,4 @@
-package com.example.cinelunaapp.Components
+package com.example.cinelunaapp.components
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
