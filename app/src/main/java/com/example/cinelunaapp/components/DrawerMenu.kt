@@ -1,17 +1,17 @@
 package com.example.cinelunaapp.components
 
 import androidx.compose.foundation.clickable
-import androidx.compose.foundation.layout.Column
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.*
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavController
 import androidx.compose.material.Divider
 import androidx.compose.material.Text
-import java.lang.reflect.Modifier
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.tooling.preview.Preview
+import androidx.compose.ui.unit.dp
 
 @Composable
-fun DrawerMenu(
+@Preview fun DrawerMenu(
     navController: NavController,
     onCloseDrawer : () -> Unit,
     onChangeTitle: (String)->Unit
@@ -34,9 +34,9 @@ fun DrawerMenu(
             modifier = Modifier.height(23.dp).clickable
             {
                 //Agregar el lugar de navegacion
-                navController.navigate("")
+                navController.navigate("cartelera")
                 onCloseDrawer()
-                onChangeTitle("")
+                onChangeTitle("Cartelera")
             }
         )
         Divider(
@@ -47,9 +47,9 @@ fun DrawerMenu(
             modifier = Modifier.height(23.dp).clickable
             {
                 //Agregar el lugar de navegacion
-                navController.navigate("")
+                navController.navigate("somos")
                 onCloseDrawer()
-                onChangeTitle("")
+                onChangeTitle("¿Quienes Somos?")
             }
         )
     }

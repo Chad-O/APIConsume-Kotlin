@@ -2,13 +2,14 @@ package com.example.cinelunaapp.components
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
-import app.src.main.java.com.example.cinelunaapp.R
+import androidx.compose.ui.platform.LocalContext
+
 
 @Composable
 fun Header(){
     Text(
         text = LocalContext.current.getString(
-            R.string.pelicula_lista_titulo
+    1
         )
     )
 }
