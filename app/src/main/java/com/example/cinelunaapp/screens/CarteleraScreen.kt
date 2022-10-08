@@ -17,50 +17,7 @@ import kotlinx.coroutines.launch
 @Composable
 fun CarteleraScreen()
 {
-    val navController = rememberNavController()
-    val scaffoldState = rememberScaffoldState()
-    val scope = rememberCoroutineScope()
 
-    val titulo = remember {
-        mutableStateOf("Cartelera")
-    }
-
-    val openDrawer: () -> Unit = {
-        scope.launch {
-            scaffoldState.drawerState.open()
-        }
-    }
-
-    val closeDrawer: () -> Unit = {
-        scope.launch {
-            scaffoldState.drawerState.close()
-        }
-    }
-
-    var changeTitle : (String) -> Unit = {newTitulo ->
-        titulo.value = newTitulo
-    }
-
-    Scaffold (
-        scaffoldState = scaffoldState,
-        topBar = {
-            TopBar(
-                title = titulo.value,
-                onOpenDrawer = openDrawer
-                )
-            },
-        drawerContent = {
-            DrawerMenu(
-                navController = navController,
-                onCloseDrawer = closeDrawer,
-                onChangeTitle = changeTitle
-            )
-        }
-    ){
-        NavigationGraph(
-            navController = navController
-        )
-    }
 
     //Aqui se agrega el resto
 }
