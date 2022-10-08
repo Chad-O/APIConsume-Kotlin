@@ -10,6 +10,7 @@ import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import com.example.cinelunaapp.screens.CarteleraScreen
 import com.example.cinelunaapp.ui.theme.CineLunaAppTheme
 
 class MainActivity : ComponentActivity() {
@@ -22,22 +23,17 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    DefaultPreview()
                 }
             }
         }
     }
 }
 
-@Composable
-fun Greeting(name: String) {
-    Text(text = "Jijiji CC $name!")
-}
-
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     CineLunaAppTheme {
-        Greeting("Android")
+        CarteleraScreen()
     }
 }
