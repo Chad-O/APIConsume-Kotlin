@@ -23,7 +23,7 @@ fun LoginFields (
         Text(text = "Ingrese su nombre")
         OutlinedTextField(value = name , onValueChange = onNameChange)
         Button(onClick = {
-            if(name != ""){
+            if(name.trim().isNotBlank()){
                 onLoginClick(name)
             }
         }) {

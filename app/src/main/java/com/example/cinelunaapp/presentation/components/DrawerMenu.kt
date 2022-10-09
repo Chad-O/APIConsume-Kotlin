@@ -54,14 +54,14 @@ fun DrawerMenu(
                 //Agregar el lugar de navegacion
                 navController.navigate("cartelera")
                 onCloseDrawer()
-                onChangeTitle("Cartelera")
+                onChangeTitle("Hola ${userName}")
             }
         )
         Divider(
             modifier = Modifier.fillMaxWidth()
         )
         Text(
-            text = "Sobre Nostros",
+            text = "Sobre Nosotros",
             modifier = Modifier
                 .height(50.dp)
                 .wrapContentSize(Alignment.Center)

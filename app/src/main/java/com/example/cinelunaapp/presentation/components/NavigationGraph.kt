@@ -11,7 +11,8 @@ import com.example.cinelunaapp.presentation.screens.PeliculaScreen
 
 @Composable
 fun NavigationGraph(
-    navController : NavHostController
+    navController : NavHostController,
+    username : String
 ){
     NavHost(
         navController = navController,
@@ -21,7 +22,7 @@ fun NavigationGraph(
             SomosScreen()
         }
         composable("cartelera"){
-            CarteleraScreen()
+            CarteleraScreen(username)
         }
         composable("pelicula"){
             PeliculaScreen()

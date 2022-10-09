@@ -21,7 +21,7 @@ fun Navegacion(
     val scope = rememberCoroutineScope()
 
     val titulo = remember {
-        mutableStateOf("Cartelera")
+        mutableStateOf("Hola $userName")
     }
 
     val openDrawer: () -> Unit = {
@@ -59,7 +59,8 @@ fun Navegacion(
     )
     {
         NavigationGraph(
-            navController = navController
+            navController = navController,
+            username = userName!!
         )
     }
 }
