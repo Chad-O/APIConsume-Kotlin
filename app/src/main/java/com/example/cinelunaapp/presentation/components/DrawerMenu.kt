@@ -17,8 +17,9 @@ import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 
 @Composable
-@Preview fun DrawerMenu(
+fun DrawerMenu(
     navController: NavController,
+    userName: String?,
     onCloseDrawer : () -> Unit,
     onChangeTitle: (String)->Unit
 ){
@@ -34,7 +35,7 @@ import androidx.compose.ui.unit.dp
     ){
         Text(
             //Debe ser el nombre ingresado en login
-            text = "Placeholder",
+            text = userName!!,
             modifier = Modifier
                 .height(100.dp)
                 .wrapContentSize(Alignment.Center),

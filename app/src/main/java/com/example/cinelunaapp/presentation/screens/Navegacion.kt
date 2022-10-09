@@ -13,7 +13,9 @@ import com.example.cinelunaapp.presentation.components.TopBar
 import kotlinx.coroutines.launch
 
 @Composable
-fun Navegacion(){
+fun Navegacion(
+    userName : String?
+){
     val navController = rememberNavController()
     val scaffoldState = rememberScaffoldState()
     val scope = rememberCoroutineScope()
@@ -50,7 +52,8 @@ fun Navegacion(){
             DrawerMenu(
                 navController = navController,
                 onCloseDrawer = closeDrawer,
-                onChangeTitle = changeTitle
+                onChangeTitle = changeTitle,
+                userName = userName
             )
         }
     )

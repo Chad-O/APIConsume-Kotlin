@@ -20,11 +20,12 @@ class MainActivity : ComponentActivity() {
         setContent {
             CineLunaAppTheme {
                 // A surface container using the 'background' color from the theme
+                var name : String? = intent.getStringExtra("name");
                 Surface(
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    LoginScreen()
+                    Navegacion(name)
                 }
             }
         }

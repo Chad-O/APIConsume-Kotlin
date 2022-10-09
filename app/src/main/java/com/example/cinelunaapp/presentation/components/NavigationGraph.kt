@@ -15,11 +15,8 @@ fun NavigationGraph(
 ){
     NavHost(
         navController = navController,
-        startDestination = "login"
+        startDestination = "cartelera"
     ){
-        composable("login"){
-            LoginScreen()
-        }
         composable("somos"){
             SomosScreen()
         }
