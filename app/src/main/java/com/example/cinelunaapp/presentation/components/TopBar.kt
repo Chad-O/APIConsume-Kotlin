@@ -1,4 +1,4 @@
-package com.example.cinelunaapp.components
+package com.example.cinelunaapp.presentation.components
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Icon

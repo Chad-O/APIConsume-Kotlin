@@ -1,4 +1,4 @@
-package com.example.cinelunaapp.components
+package com.example.cinelunaapp.presentation.components
 
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
