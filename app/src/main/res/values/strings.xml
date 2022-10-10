@@ -1,4 +1,4 @@
 <resources>
     <string name="app_name">Cine Lune</string>
-    <string name="title_activity_login">LoginActivity</string>
+    <string name="title_activity_login">PM-LuneCine</string>
 </resources>

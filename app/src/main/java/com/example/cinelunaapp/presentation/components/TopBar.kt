@@ -19,13 +19,11 @@ fun TopBar(
     onOpenDrawer : () -> Unit
 ){
     TopAppBar(
-
         title = {
             Text(text = title,
                 textAlign = TextAlign.Center,
                 modifier = Modifier
                     )
-
         },
         navigationIcon = {
             IconButton(

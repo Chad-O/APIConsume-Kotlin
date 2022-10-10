@@ -21,7 +21,6 @@ import kotlinx.coroutines.launch
 @Preview fun PeliculaScreen(
 
 ){
-
     Column(
         modifier = Modifier
             .fillMaxSize()
