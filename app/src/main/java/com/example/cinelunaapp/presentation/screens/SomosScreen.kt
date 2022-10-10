@@ -28,17 +28,19 @@ import com.example.cinelunaapp.presentation.screens.Navegacion
         Column() {
             Text(text = "Mauricio Cisneros (20192624)",
                 modifier = Modifier.padding(6.dp)
-                    .padding(start = 0.dp, top = 40.dp, end = 0.dp, bottom = 0.dp),
+                    .padding(start = 0.dp, top = 40.dp, end = 0.dp, bottom = 5.dp),
                 fontSize = 20.sp,
                 textAlign = TextAlign.Center)
 
             Text(text = "Javier Olazábal (20191425)",
-                modifier = Modifier.padding(6.dp),
+                modifier = Modifier.padding(6.dp)
+                    .padding(start = 0.dp, top = 20.dp, end = 0.dp, bottom = 5.dp),
                 fontSize = 20.sp,
                 textAlign = TextAlign.Center)
 
             Text(text = "Ricardo Silva(20191923)",
-                modifier = Modifier.padding(6.dp),
+                modifier = Modifier.padding(6.dp)
+                    .padding(start = 0.dp, top = 20.dp, end = 0.dp, bottom = 5.dp),
                 fontSize = 20.sp,
                 textAlign = TextAlign.Center)
         }

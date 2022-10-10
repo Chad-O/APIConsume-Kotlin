@@ -17,6 +17,7 @@ import com.example.cinelunaapp.presentation.components.NavigationGraph
 import com.example.cinelunaapp.presentation.components.TopBar
 import kotlinx.coroutines.launch
 
+
 @Composable
 @Preview fun PeliculaScreen(
 

@@ -1,5 +1,6 @@
 package com.example.cinelunaapp.presentation.components
 
+import android.text.style.LineHeightSpan
 import androidx.compose.foundation.border
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.*
@@ -30,30 +31,33 @@ fun DrawerMenu(
     onCloseDrawer : () -> Unit,
     onChangeTitle: (String)->Unit
 ){
+
     Column(
         modifier= Modifier
             .fillMaxSize(),
-        verticalArrangement = Arrangement.Top
-    ){
-            Text(
-                //Debe ser el nombre ingresado en login
-                text = userName!!,
-                modifier = Modifier
-                    .height(90.dp)
-                    .fillMaxWidth(),
-                textAlign = TextAlign.Center,
-                fontSize = 27.sp,
-            )
+    ) {
+        Text(
+            //Debe ser el nombre ingresado en login
+            text = userName!!,
+            modifier = Modifier
+                .height(90.dp)
+                .fillMaxWidth()
+                .padding(30.dp),
+            textAlign = TextAlign.Center,
+            fontSize = 25.sp,
+
+        )
         Divider(
             modifier = Modifier.fillMaxWidth()
-                .border(2.dp,Color.Black)
+                .border(2.dp, Color.Black)
         )
         Text(
             text = "Cartelera",
             textAlign = TextAlign.Left,
+
             modifier = Modifier
                 .height(50.dp)
-                .padding(10.dp)
+                .padding(12.dp)
                 .clickable
                 {
                     //Agregar el lugar de navegacion
@@ -67,7 +71,7 @@ fun DrawerMenu(
             textAlign = TextAlign.Left,
             modifier = Modifier
                 .height(50.dp)
-                .padding(10.dp)
+                .padding(12.dp)
                 .clickable
                 {
                     //Agregar el lugar de navegacion
@@ -75,6 +79,7 @@ fun DrawerMenu(
                     onCloseDrawer()
                     onChangeTitle("¿Quienes Somos?")
                 }
-        )
+            )
     }
+
 }
