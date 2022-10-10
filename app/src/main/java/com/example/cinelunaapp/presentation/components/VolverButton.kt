@@ -19,7 +19,7 @@ import com.example.cinelunaapp.presentation.components.NavigationGraph
 fun BotonVolver(
     navController: NavHostController
 ){
-    Button(onClick = { navController.navigate("cartelera")  } ,
+    Button(onClick = { navController.popBackStack() } ,
         modifier = Modifier
             .fillMaxWidth()
             .padding(10.dp)
