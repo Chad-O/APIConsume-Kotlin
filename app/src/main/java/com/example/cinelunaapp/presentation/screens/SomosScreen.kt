@@ -13,12 +13,16 @@ import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavController
+import androidx.navigation.NavHostController
 import com.example.cinelunaapp.presentation.components.BotonVolver
 import com.example.cinelunaapp.presentation.screens.Navegacion
 
 
 @Composable
-@Preview fun SomosScreen()
+fun SomosScreen(
+    navController: NavHostController
+)
 {
     Column(
         modifier = Modifier.fillMaxSize(),
@@ -44,6 +48,6 @@ import com.example.cinelunaapp.presentation.screens.Navegacion
                 fontSize = 20.sp,
                 textAlign = TextAlign.Center)
         }
-        BotonVolver()
+        BotonVolver(navController)
     }
 }

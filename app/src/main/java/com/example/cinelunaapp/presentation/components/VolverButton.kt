@@ -17,9 +17,8 @@ import com.example.cinelunaapp.presentation.components.NavigationGraph
 //Reinicia la aplicación XD funciona como un logout.
 @Composable
 fun BotonVolver(
+    navController: NavHostController
 ){
-    val navController = rememberNavController()
-
     Button(onClick = { navController.navigate("cartelera")  } ,
         modifier = Modifier
             .fillMaxWidth()

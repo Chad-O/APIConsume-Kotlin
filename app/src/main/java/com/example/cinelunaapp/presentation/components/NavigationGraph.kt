@@ -19,7 +19,7 @@ fun NavigationGraph(
         startDestination = "cartelera"
     ){
         composable("somos"){
-            SomosScreen()
+            SomosScreen(navController)
         }
         composable("cartelera"){
             CarteleraScreen(username)
