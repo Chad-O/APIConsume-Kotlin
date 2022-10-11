@@ -9,6 +9,7 @@ import androidx.navigation.compose.rememberNavController
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.remember
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
 import com.example.cinelunaapp.model.Pelicula
 import com.example.cinelunaapp.presentation.components.DrawerMenu
 import com.example.cinelunaapp.presentation.components.NavigationGraph
@@ -18,10 +19,10 @@ import com.example.cinelunaapp.presentation.viewmodels.PeliculasViewModel
 import kotlinx.coroutines.launch
 import com.example.cinelunaapp.presentation.components.NavigationGraph
 @Composable
-fun CarteleraScreen(userName : String, navigateToProfile: (Pelicula)->Unit) {
+fun CarteleraScreen(userName : String, navController : NavHostController) {
     var viewModelPeli = PeliculasViewModel();
     viewModelPeli.obtenerPeliculas();
     Column{
-        PeliculaLista(peliculas = viewModelPeli.listaPeliculas, navigateToProfile)
+        PeliculaLista(peliculas = viewModelPeli.listaPeliculas, navController)
     }
 }

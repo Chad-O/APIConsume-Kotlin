@@ -31,23 +31,13 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    MyApp{
-                        startActivity(ProfileActivity.newIntent(this, it))
-                    }
+                    Navegacion(userName = name )
                 }
             }
         }
     }
 }
 
-@Composable
-fun MyApp(navigateToProfile: (Pelicula)->Unit){
-    Scaffold(
-        content = {
-            Navegacion(nombre,navigateToProfile = navigateToProfile)
-        }
-    )
-}
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {

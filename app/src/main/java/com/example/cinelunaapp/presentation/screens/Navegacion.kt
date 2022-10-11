@@ -22,8 +22,7 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun Navegacion(
-    userName : String?,
-    navigateToProfile: (Pelicula)->Unit
+    userName : String?
 ){
     val navController = rememberNavController()
     val scaffoldState = rememberScaffoldState()
@@ -70,7 +69,6 @@ fun Navegacion(
         NavigationGraph(
             navController = navController,
             username = userName!!,
-            navigateToProfile = navigateToProfile
         )
     }
 }
