@@ -1,43 +1,58 @@
 package com.example.cinelunaapp.presentation.components
 
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxWidth
-import androidx.compose.foundation.layout.height
+import androidx.compose.foundation.layout.*
+import androidx.compose.material.Button
 import androidx.compose.material.Card
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import androidx.navigation.NavHostController
+import androidx.navigation.compose.rememberNavController
 import com.example.cinelunaapp.model.Pelicula
 
 @Composable
 fun DetallePelicula(
     peliculaData: Pelicula
 ){
-    Card(
-        elevation = 4.dp
+    Column(
+        modifier = Modifier.fillMaxSize(),
+        horizontalAlignment = Alignment.CenterHorizontally,
+        verticalArrangement = Arrangement.SpaceBetween
     ) {
-        Box(
-            modifier = Modifier.fillMaxWidth()
-                .height(100.dp),
-        ) {
+        Text(text = peliculaData.nombre,
+            textAlign = TextAlign.Center,
+            modifier = Modifier.padding(20.dp),
+            fontSize = 25.sp)
+        Column() {
             Text(
-                text = peliculaData.nombre,
-                fontSize = 20.sp,
-                modifier = Modifier.align(Alignment.TopCenter)
-            )
-            Text(
+                modifier = Modifier
+                    .padding(6.dp)
+                    .padding(start = 0.dp, top = 1.dp, end = 0.dp, bottom = 5.dp),
                 text = peliculaData.resena,
-                fontSize = 20.sp,
-                modifier = Modifier.align(Alignment.Center)
+                fontSize = 15.sp,
+                textAlign = TextAlign.Justify
             )
             Text(
-                text = peliculaData.hora,
+                modifier = Modifier
+                    .padding(6.dp)
+                    .padding(start = 0.dp, top = 2.dp, end = 0.dp, bottom = 5.dp),
+                text = "Hora: "+ peliculaData.hora,
                 fontSize = 20.sp,
-                modifier = Modifier.align(Alignment.Center)
+                textAlign = TextAlign.End
             )
+        }
+
+        //Implementar- Button_regresar
+        Button(onClick = {} ,
+            modifier = Modifier
+                .fillMaxWidth()
+                .padding(7.dp)
+        ){
+            Text(text = "Regresar")
         }
     }
 }

@@ -14,6 +14,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
+import com.example.cinelunaapp.model.Pelicula
 import com.example.cinelunaapp.presentation.components.DrawerMenu
 import com.example.cinelunaapp.presentation.components.NavigationGraph
 import com.example.cinelunaapp.presentation.components.TopBar
@@ -21,7 +22,8 @@ import kotlinx.coroutines.launch
 
 @Composable
 fun Navegacion(
-    userName : String?
+    userName : String?,
+    navigateToProfile: (Pelicula)->Unit
 ){
     val navController = rememberNavController()
     val scaffoldState = rememberScaffoldState()
@@ -67,7 +69,8 @@ fun Navegacion(
     {
         NavigationGraph(
             navController = navController,
-            username = userName!!
+            username = userName!!,
+            navigateToProfile = navigateToProfile
         )
     }
 }

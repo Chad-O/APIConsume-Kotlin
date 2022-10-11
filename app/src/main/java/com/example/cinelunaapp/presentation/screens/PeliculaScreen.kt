@@ -10,22 +10,22 @@ import androidx.compose.runtime.remember
 import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.NavHostController
 import androidx.navigation.compose.rememberNavController
-import com.example.cinelunaapp.presentation.components.DetallePelicula
-import com.example.cinelunaapp.presentation.components.DrawerMenu
-import com.example.cinelunaapp.presentation.components.NavigationGraph
-import com.example.cinelunaapp.presentation.components.TopBar
+import com.example.cinelunaapp.model.Pelicula
+import com.example.cinelunaapp.presentation.components.*
+import com.example.cinelunaapp.ui.theme.CineLunaAppTheme
 import kotlinx.coroutines.launch
 
 
 @Composable
-@Preview fun PeliculaScreen(
-
+fun PeliculaScreen(
+    peliculaData: Pelicula,
 ){
     Column(
         modifier = Modifier
             .fillMaxSize()
     ) {
-        //DetallePelicula()
+        DetallePelicula(peliculaData)
     }
 }
